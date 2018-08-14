@@ -93,6 +93,7 @@ allprojects {
         compile 'com.boydti:fawe-bukkit:latest'
         compile 'com.boydti:fawe-api:18.08.14-db65e96-1976'
         //compile 'com.sk89q.worldguard:worldguard-legacy:7.0.0-SNAPSHOT'
+        compile 'com.sk89q:worldguard-core:latest'
         compile 'com.sk89q:worldguard-legacy:latest'
         compile 'com.sk89q:squirrelid:0.1.0'
         compile 'net.milkbowl.vault:VaultAPI:1.6'
