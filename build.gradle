@@ -29,10 +29,6 @@ buildscript {
     }
 }
 
-repositories {
-    flatDir { dirs 'lib' }
-}
-
 if (!project.hasProperty("artifactory_contextUrl")) ext.artifactory_contextUrl = "http://localhost"
 if (!project.hasProperty("artifactory_user")) ext.artifactory_user = "guest"
 if (!project.hasProperty("artifactory_password")) ext.artifactory_password = ""
@@ -95,7 +91,8 @@ allprojects {
         //compile 'com.sk89q.worldedit:worldedit-bukkit:7.0.0-SNAPSHOT'
         compile 'com.boydti:fawe-bukkit:latest'
         compile 'com.boydti:fawe-api:18.08.14-db65e96-1976'
-        compile 'com.sk89q.worldguard:worldguard-legacy:7.0.0-SNAPSHOT'
+        //compile 'com.sk89q.worldguard:worldguard-legacy:7.0.0-SNAPSHOT'
+        compile 'com.sk89q:worldguard-legacy:latest'
         compile 'com.sk89q:squirrelid:0.1.0'
         compile 'net.milkbowl.vault:VaultAPI:1.6'
         compile 'com.comphenix.protocol:ProtocolLib-API:4.4.0-SNAPSHOT'
