@@ -124,12 +124,12 @@ allprojects {
 
     artifacts {
         archives shadowJar
-        archives sourcesJar
-        archives javadocJar
+        //archives sourcesJar
+        //archives javadocJar
     }
 
-    build.dependsOn(sourcesJar)
-    build.dependsOn(javadocJar)
+    //build.dependsOn(sourcesJar)
+    //build.dependsOn(javadocJar)
 
     jar {
         manifest {
@@ -149,27 +149,27 @@ allprojects {
         exclude 'LICENSE*'
     }
 
-    artifactory {
-        contextUrl = "${artifactory_contextUrl}"
-        publish {
-            repository {
-                repoKey = project.version.contains("SNAPSHOT") ? 'libs-snapshot-local' : 'libs-release-local'
-                username = "${artifactory_user}"
-                password = "${artifactory_password}"
-                maven = true
-
-            }
-        }
-
-        resolve {
-            repository {
-                repoKey = 'repo'
-                username = "${artifactory_user}"
-                password = "${artifactory_password}"
-                maven = true
-            }
-        }
-    }
+    //artifactory {
+    //    contextUrl = "${artifactory_contextUrl}"
+    //    publish {
+    //        repository {
+    //            repoKey = project.version.contains("SNAPSHOT") ? 'libs-snapshot-local' : 'libs-release-local'
+    //            username = "${artifactory_user}"
+    //            password = "${artifactory_password}"
+    //            maven = true
+    //
+    //        }
+    //    }
+    //
+    //    resolve {
+    //        repository {
+    //            repoKey = 'repo'
+    //            username = "${artifactory_user}"
+    //            password = "${artifactory_password}"
+    //            maven = true
+    //        }
+    //    }
+    //}
 
     processResources {
         from (sourceSets.main.resources.srcDirs) {
